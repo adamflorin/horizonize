@@ -1,0 +1,44 @@
+/**
+* demo_styles.css: example user-specified page & article styles
+* 
+* Adam Florin - 2011
+*/
+
+/**
+* general page styles
+*/
+body {
+  background-color: #f9f9f9;
+}
+.container {
+  padding-top: 50px;
+}
+.content_viewport {
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+/**
+* article typography
+*/
+h1.title {
+  padding: 80px 0 20px 10px;
+  font-size: 400%;
+}
+h4.subtitle {
+  padding-left: 10px;
+}
+p.opening {
+  font-size: 150%;
+}
+div.image_wrapper {
+  margin: 0 auto;
+  height: auto;
+}
+.pullquote {
+  font-family: Georgia serif;
+  line-height: 1.2em;
+  font-size: 200%;
+  padding-left: 60px;
+  padding-right: 60px;
+}

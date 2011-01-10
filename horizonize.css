@@ -1,0 +1,161 @@
+/**
+* horizonize.css: core required CSS styles for Horizonize.
+* 
+* Not intended to be modified in any significant way!
+* See demo_styles.css for user-customizable styles.
+* 
+* Adam Florin - 2011
+*/
+
+/**
+* viewing area
+*/
+.content_viewport {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 520px;
+}
+  .content_viewport .content_container {
+    width: 50000px; /* X-LARGE */
+    position: relative;
+    height: 520px;
+  }
+
+/* secret offscreen area where horizonize works */
+#hz_sandbox {
+  position: absolute;
+  left: -50000px;
+  top: 0;
+  height: 520px;
+}
+
+
+/**
+* HORIZONIZE CORE LAYOUT STYLES
+*/
+
+.hz_column {
+  position: absolute;
+  
+  /* based on span-8 */
+  margin-right: 10px;
+  width: 290px;
+  padding: 0 10px 10px 10px;
+}
+  .hz_column p,
+  .hz_column blockquote {
+    word-wrap: break-word;
+    /* IMPT: keep 'margin-bottom: 0'. OK to edit 'margin-top' tho. --AF */
+    margin-top: 10px;
+    margin-bottom: 0; /* IMP'T! */
+  }
+
+/* copied & pasted from Blueprint because of load order... */
+.last {margin-right:0;}
+
+.hz_inline_image {
+  width: 310px;
+}
+
+/* nobleed_ classes for floating objects that would full bleed but want custom padding */
+.nobleed_top {
+  padding-bottom: 15px;
+  padding-top: 25px;
+}
+.nobleed_bottom {
+  padding-top: 0;
+  padding-bottom: 25px;
+}
+
+
+/**
+* HORIZONIZE FLOAT CLASSES
+*/
+
+/* all floats are absolute */
+.hz_float_col1_top,
+.hz_float_col1_bottom,
+.hz_float_col2_top,
+.hz_float_col2_bottom,
+.hz_float_col3_top,
+.hz_float_col3_bottom {
+  position: absolute;
+}
+
+/* top */
+.hz_float_col1_top,
+.hz_float_col2_top,
+.hz_float_col3_top {
+  top: 0;
+  margin-bottom: 10px;
+}
+
+/* bottom */
+.hz_float_col1_bottom,
+.hz_float_col2_bottom,
+.hz_float_col3_bottom {
+  bottom: 0;
+  margin-top: 10px;
+}
+
+/* col1: like span-8 */
+.hz_float_col1_top,
+.hz_float_col1_bottom {
+  width: 310px;
+}
+
+/* col2: like span-16 */
+.hz_float_col2_top,
+.hz_float_col2_bottom {
+  width: 630px;
+}
+
+/* col1: like span-24 */
+.hz_float_col3_top,
+.hz_float_col3_bottom {
+  width: 950px;
+}
+
+/* 'full bleed' style for floats; no top/bottom margin, full height! */
+.hz_full_height {
+  height: 520px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+/**
+* Footnotes
+*/
+
+.hz_footnote_text {
+  position: absolute;
+  bottom: 0;
+  width: 290px;
+  height: auto;
+  cursor: pointer;
+  margin: 0 10px 0 10px;
+
+}
+  .hz_footnote_text .viewport {
+    height: 15px; /* keep in sync with FOOTNOTE_CLOSED_HEIGHT in piece.js */
+    overflow: hidden;
+    padding-right: 10px;
+    
+  }
+    .hz_footnote_text .viewport .text {
+    }
+      .hz_footnote_text .viewport .text span {
+        font-weight: bold;
+      }
+
+a.hz_footnote {
+  vertical-align: super;
+  font-size: 70%;
+  font-weight: bold;
+  padding-left: 1px;
+}
+
+a.hz_footnote:hover {
+	text-decoration: none;
+}
