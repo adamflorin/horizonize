@@ -3,6 +3,9 @@
 * Adam Florin - 2011
 */
 
+// for IE8
+if (Node === undefined) var Node = {ELEMENT_NODE: 1, TEXT_NODE: 3, COMMENT_NODE: 8};
+
 /**
 * one call to trigger horizonize layout process
 */

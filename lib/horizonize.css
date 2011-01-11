@@ -13,6 +13,7 @@
 .content_viewport {
   overflow-x: scroll;
   overflow-y: hidden;
+  position: relative; /* IMPT for IE8 */
   height: 520px;
 }
   .content_viewport .content_container {
