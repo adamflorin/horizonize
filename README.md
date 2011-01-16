@@ -15,7 +15,7 @@ Include `jquery.horizonize.js` and `horizonize.css` in your HTML doc.
 
 Set up basic HTML elements:
   
-    <!-- empty div for horizonize will write to -->
+    <!-- empty div for horizonize to write to -->
     <div id="piece_viewer" class="content_viewport span-24 last">
       <div class="content_container">
       </div>
